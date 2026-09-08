@@ -1,0 +1,233 @@
+/* style.css */
+/* สไตล์พื้นฐานสำหรับเว็บไซต์ความปลอดภัยบนโลกออนไลน์ */
+
+:root {
+    --primary: #1c4a8c;
+    --primary-dark: #14335e;
+    --primary-light: #2f6fc9;
+    --accent: #17a97b;
+    --accent-dark: #0f7f5c;
+    --warning: #e0a800;
+    --bg: #eaf3fb;
+    --text: #222222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'TH Sarabun New', Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--bg) 0%, #f4f9ff 100%);
+    color: var(--text);
+}
+
+/* แถบเมนูด้านบน */
+.navbar {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 6px;
+    padding: 8px 14px;
+    font-size: 20px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* หัวข้อใหญ่ของแต่ละหน้า */
+.header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 44px 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.header h1 {
+    font-size: 34px;
+    margin: 0 0 10px 0;
+}
+
+.header p {
+    font-size: 20px;
+    color: #eaf3fb;
+}
+
+/* กล่องเนื้อหาหลัก */
+.content {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 0 20px 20px 20px;
+}
+
+/* กล่องแสดงหัวข้อในหน้าแรก */
+.box {
+    background-color: #ffffff;
+    border: none;
+    border-top: 5px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 10px rgba(28, 74, 140, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(28, 74, 140, 0.2);
+}
+
+.box h2 {
+    color: var(--primary);
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.box a {
+    color: var(--accent-dark);
+    font-weight: bold;
+}
+
+/* หัวข้อย่อยในหน้าเนื้อหา */
+h2 {
+    color: var(--primary);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 6px;
+    margin-top: 34px;
+}
+
+ul li {
+    margin-bottom: 6px;
+}
+
+ul li::marker {
+    color: var(--accent);
+}
+
+a {
+    color: var(--primary-light);
+}
+
+/* กล่องคำแนะนำ/ลิงก์เพิ่มเติม */
+.tip {
+    background: linear-gradient(135deg, #fff9e8, #fff2cc);
+    border: 2px dashed var(--warning);
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 2px 6px rgba(224, 168, 0, 0.15);
+}
+
+/* ตาราง */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(28, 74, 140, 0.1);
+}
+
+table th, table td {
+    border: 1px solid #dbe6f3;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    color: #ffffff;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f4f9ff;
+}
+
+table tr:hover td {
+    background-color: #e9f3ff;
+}
+
+/* การ์ดสายด่วน */
+.hotline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0 24px 0;
+}
+
+.hotline-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #ffffff;
+    border-left: 6px solid var(--accent);
+    border-radius: 8px;
+    padding: 14px 18px;
+    box-shadow: 0 3px 8px rgba(28, 74, 140, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.hotline-card:hover {
+    transform: translateX(4px);
+}
+
+.hotline-card .org-name {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.hotline-card .org-site a {
+    color: #666666;
+    font-size: 15px;
+}
+
+.hotline-card .phone-btn {
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(15, 127, 92, 0.35);
+    transition: filter 0.2s ease;
+}
+
+.hotline-card .phone-btn:hover {
+    filter: brightness(1.08);
+}
+
+/* ท้ายหน้าเว็บ */
+.footer {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.footer a {
+    color: #ffffff;
+}
